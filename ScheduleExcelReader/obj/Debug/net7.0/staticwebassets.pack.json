@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ScheduleExcelReader.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ScheduleExcelReader.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ScheduleExcelReader.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ScheduleExcelReader.props",
+      "PackagePath": "build\\ScheduleExcelReader.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ScheduleExcelReader.props",
+      "PackagePath": "buildMultiTargeting\\ScheduleExcelReader.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ScheduleExcelReader.props",
+      "PackagePath": "buildTransitive\\ScheduleExcelReader.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

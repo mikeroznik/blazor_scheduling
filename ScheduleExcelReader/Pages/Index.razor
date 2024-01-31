@@ -1,0 +1,128 @@
+﻿@page "/"
+@using ScheduleExcelReader.Data
+@inject ScheduleService ScheduleService
+
+<script type="text/javascript">
+	function copyClipboard(EventArgs e, Game game)
+	{
+		navigator.clipboard.writeText(game.location);
+		
+	}
+</script>
+
+@if (games == null)
+{
+	<p>Loading...</p>
+}
+else
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Count</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (ScoreKeeper scorekeeper in scoreKeepers)
+			{
+				<tr>
+					<td>@scorekeeper.Name</td>
+					<td>@games.Where(g => g.ScoreKeeper?.Name == scorekeeper.Name).Count()</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Location</th>
+				<th>Away</th>
+				<th>Home</th>
+				<th>ScoreKeeper</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@code {DateTime previousDate = DateTime.Today;}
+			@foreach(Game game in games)
+			{
+				if(previousDate.Date != game.GameDateAndTime.Date)
+				{
+					<tr style="column-span:all">
+						<hr />
+					</tr>
+				}
+
+				<tr style="@GetCssRowStyle(game, game.ScoreKeeper)">
+					<td>@game.GameDateAndTime.ToString("dddd MMMM dd, h:mm tt")</td>
+					<td>@game.Location</td>
+					<td>@game.AwayTeam</td>
+					<td>@game.HomeTeam</td>
+					<td>@game.ScoreKeeper?.Name</td>
+					<td><a href="#" onclick="toClipboard(event, @game)">Copy</a></td>
+				</tr>
+				previousDate = game.GameDateAndTime;
+			}
+		</tbody>
+	</table>
+}
+
+@code {
+	public List<Game> games = new List<Game>();
+	public List<ScoreKeeper> scoreKeepers = new List<ScoreKeeper>();
+
+	public string GetCssRowStyle(Game gameData, ScoreKeeper scoreKeeper)
+	{
+		if (CheckTeams(scoreKeeper, gameData.HomeTeam, gameData.AwayTeam) || CheckRinks(scoreKeeper, gameData.Location))
+		{
+			return "background-color:red";
+		}
+
+		return gameData.Location switch
+		{
+			"N. Olmsted" => "background-color:orange",
+			"Rocky River" => "background-color:purple",
+			"Michael A. Reis" => "background-color:green",
+			"Barons" => "background-color:yellow",
+			"Winterhurst Rink 1" => "background-color:blue",
+			"Winterhurst Rink 2" => "background-color:aqua",
+			_ => "background-color:white"
+		};
+	}
+
+	private bool CheckTeams(ScoreKeeper scoreKeeper, string homeTeam, string awayTeam)
+	{
+		if (scoreKeeper.NoNoTeams != null && !scoreKeeper.NoNoTeams.Contains(homeTeam) && !scoreKeeper.NoNoTeams.Contains(awayTeam))
+			return true;
+
+		return false;
+	}
+
+	private bool CheckRinks(ScoreKeeper scoreKeeper, string rink)
+	{
+		if (scoreKeeper.OnlyRinks != null &&  !scoreKeeper.OnlyRinks.Contains(rink))
+			return true;
+
+		return false;
+	}
+
+	private List<Game> ReadExcelGames()
+	{
+		games = ScheduleService.GetSchedule(scoreKeepers);
+		return games;
+	}
+
+	private List<ScoreKeeper> ReadExcelScorekeepers()
+	{
+		scoreKeepers = ScheduleService.GetScorekeepers();
+		return scoreKeepers;
+	}
+
+	protected override void OnInitialized()
+	{
+		ReadExcelScorekeepers();
+		ReadExcelGames();
+	}
+}
