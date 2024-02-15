@@ -35,9 +35,9 @@ F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelRead
 F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\scopedcss\bundle\ScheduleExcelReader.styles.css
 F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\scopedcss\projectbundle\ScheduleExcelReader.bundle.scp.css
-F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\ScheduleExcelReader.csproj.CopyComplete
 F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\ScheduleExcelReader.dll
 F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\refint\ScheduleExcelReader.dll
 F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\ScheduleExcelReader.pdb
 F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\ScheduleExcelReader.genruntimeconfig.cache
 F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\ref\ScheduleExcelReader.dll
+F:\dev\blazor test app\ScheduleExcelReader\ScheduleExcelReader\ScheduleExcelReader\obj\Debug\net7.0\Schedule.C7453F53.Up2Date

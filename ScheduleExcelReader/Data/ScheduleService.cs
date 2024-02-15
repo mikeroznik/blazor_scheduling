@@ -7,39 +7,42 @@ namespace ScheduleExcelReader.Data
         public List<Game> GetSchedule(List<ScoreKeeper> scoreKeeperList)
         {
             List<Game> schedule = new List<Game>();
-            string filePath = "C:/Users/Igor/Desktop/23-24ScorekeeperSchedule.xlsx";
+            string filePath = "23-24ScorekeeperSchedule.xlsx";
 
             FileInfo fileInfo = new FileInfo(filePath);
 
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using(ExcelPackage excelPackage = new ExcelPackage(fileInfo)) 
             {
-                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets["Sheet1"];
-                int totalColumn = worksheet.Dimension.End.Column;
+                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets["February"];
+                int totalColumn = 7; // worksheet.Dimension.End.Column;
                 int totalRow = worksheet.Dimension.End.Row;
 
-                for (int row = 7; row <= totalRow; row++)
+                for (int row = 1; row <= totalRow; row++)
                 {
+                    // Create the games object
                     Game game = new Game();
                     for (int col = 1; col <= totalColumn; col++)
                     {
-                        if (col == 6) game.GameDateAndTime = 
+                        if (col == 3) game.GameDateAndTime = 
                                 Convert.ToDateTime(
                                     String.Concat(
                                         DateTime.FromOADate(double.Parse(worksheet.Cells[row, col-1].Value.ToString())).Date.ToShortDateString(), 
                                         " ", 
                                         Convert.ToDateTime(worksheet.Cells[row, col].Value).ToShortTimeString())
                                     );
-						if (col == 8) game.Location = (worksheet.Cells[row, col - 1].Value == null) ?
-								worksheet.Cells[row, col].Value.ToString() :
-								String.Concat(worksheet.Cells[row, col].Value.ToString(), " Rink ", worksheet.Cells[row, col - 1].Value.ToString());
-                        if (col == 10) game.AwayTeam = worksheet.Cells[row, col].Value.ToString();
-                        if (col == 11) game.HomeTeam = worksheet.Cells[row, col].Value.ToString();
-                        if (col == 12) game.ScoreKeeper = 
+                        // Locations are now correct on the scoresheet, no more string concat
+						if (col == 4) game.Location = String.Concat(worksheet.Cells[row, col].Value.ToString());
+                        if (col == 5) game.AwayTeam = worksheet.Cells[row, col].Value.ToString();
+                        if (col == 6) game.HomeTeam = worksheet.Cells[row, col].Value.ToString();
+                        if (col == 7) game.ScoreKeeper = 
                                 worksheet.Cells[row, col].Value != null  ? 
                                     scoreKeeperList.Where(sk => sk.Name == worksheet.Cells[row, col].Value.ToString()).First() : new ScoreKeeper();
                     }
-                    schedule.Add(game);
+
+                    // skip the beginner practices
+                    if (game.AwayTeam != "No Officials")
+                        schedule.Add(game);
                 }
             }
 
@@ -49,7 +52,7 @@ namespace ScheduleExcelReader.Data
 		public List<ScoreKeeper> GetScorekeepers()
 		{
 			List<ScoreKeeper> scoreKeepers = new List<ScoreKeeper>();
-			string filePath = "C:/Users/Igor/Desktop/23-24ScorekeeperSchedule.xlsx";
+			string filePath = "23-24ScorekeeperSchedule.xlsx";
 
 			FileInfo fileInfo = new FileInfo(filePath);
 

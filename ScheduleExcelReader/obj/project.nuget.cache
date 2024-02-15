@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Pv6o63VPSsL7Lho2s1tfbFKledws8fUDlh/ivrqijn7+xtO40tFFCSkAdsn53j0wdD6MYnzmGrk28wcjCuQRZg==",
+  "dgSpecHash": "CpmLnRTEwSCGigI9ZxKOUedscZqzRH9JnO7kPsvyS6Aw7OzkOLu9DAh18SXdXSrOwD2CaHcSrAWdkMZEgt4Lug==",
   "success": true,
   "projectFilePath": "F:\\dev\\blazor test app\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader\\ScheduleExcelReader.csproj",
   "expectedPackageFiles": [

@@ -86,15 +86,18 @@ else
 			"Rocky River" => "background-color:purple",
 			"Michael A. Reis" => "background-color:green",
 			"Barons" => "background-color:yellow",
-			"Winterhurst Rink 1" => "background-color:blue",
-			"Winterhurst Rink 2" => "background-color:aqua",
+			"Winterhurst 1" => "background-color:grey",
+			"Winterhurst 2" => "background-color:lightgrey",
 			_ => "background-color:white"
 		};
 	}
 
 	private bool CheckTeams(ScoreKeeper scoreKeeper, string homeTeam, string awayTeam)
 	{
-		if (scoreKeeper.NoNoTeams != null && !scoreKeeper.NoNoTeams.Contains(homeTeam) && !scoreKeeper.NoNoTeams.Contains(awayTeam))
+		if (scoreKeeper.NoNoTeams == null)
+			return false;
+
+		if (scoreKeeper.NoNoTeams.Contains(homeTeam) || scoreKeeper.NoNoTeams.Contains(awayTeam))
 			return true;
 
 		return false;
